@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Form Inspeksi Produk</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    
+    .judul-form {
+      border-bottom: 2px solid black;
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+      width: 425px;
+    }
+
+    form {
+      max-width: 400px;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+    input, button {
+      margin-top: 5px;
+      padding: 8px;
+      width: 100%;
+    }
+    .radio-group {
+      margin-top: 5px;
+    }
+    .radio-group input {
+      width: auto;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 class="judul-form">Form Inspeksi Produk</h2>
+
+  <form>
+    <!-- ID Produk -->
+    <label for="idProduk">ID Produk</label>
+    <input type="text" id="idProduk" name="idProduk" required>
+
+    <!-- Nama Inspektur -->
+    <label for="namaInspektur">Nama Inspektur</label>
+    <input type="text" id="namaInspektur" name="namaInspektur" required>
+
+    <!-- Jenis Cacat -->
+    <label>Jenis Cacat:</label>
+    <div class="radio-group">
+    <label>
+        <input type="radio" name="jenisCacat" value="Geometri"> Geometri
+    </label>
+
+    <label>
+        <input type="radio" name="jenisCacat" value="Permukaan"> Permukaan
+    </label>
+
+    <label>
+        <input type="radio" name="jenisCacat" value="Fungsional"> Fungsional
+    </label>
+    </div>
+
+    <!-- Jumlah Cacat -->
+    <label for="jumlahCacat">Jumlah Cacat</label>
+    <input type="number" id="jumlahCacat" name="jumlahCacat" min="0" required>
+
+    <!-- Foto Produk -->
+    <label for="fotoProduk">Foto Produk</label>
+    <input type="file" id="fotoProduk" name="fotoProduk">
+
+    <!-- Tombol Submit -->
+    <button type="submit">Submit</button>
+  </form>
+
+</body>
+</html>
